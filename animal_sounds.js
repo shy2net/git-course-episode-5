@@ -38,6 +38,18 @@ class SlenderMan extends Animal {
   }
 }
 
+class Frog extends Animal {
+  makeSound() {
+    console.log('oh ah oh ah');
+  }
+}
+
+class Cricket extends Animal {
+  makeSound() {
+    console.log('zzzz_zzzzz_zzzzz');
+  }
+}
+
 module.exports = {
   makeAnimalSound: (animalName) => {
     let animal = null;
@@ -58,8 +70,14 @@ module.exports = {
       case 'monster':
         animal = new Monster();
         break;
+      case 'cricket':
+        animal = new Cricket();
+        break;
       case 'slender-man':
         animal = new SlenderMan();
+        break;
+      case 'frog':
+        animal = new Frog();
         break;
       default:
         console.log("I don't know that animal!");
