@@ -26,6 +26,18 @@ class Panda extends Animal {
   }
 }
 
+class Monster extends Animal {
+  makeSound() {
+    console.log('boooo!!');
+  }
+}
+
+class SlenderMan extends Animal {
+  makeSound() {
+    console.log('hihihihihi!!');
+  }
+}
+
 module.exports = {
   makeAnimalSound: (animalName) => {
     let animal = null;
@@ -42,6 +54,12 @@ module.exports = {
         break;
       case 'panda':
         animal = new Panda();
+        break;
+      case 'monster':
+        animal = new Monster();
+        break;
+      case 'slender-man':
+        animal = new SlenderMan();
         break;
       default:
         console.log("I don't know that animal!");
